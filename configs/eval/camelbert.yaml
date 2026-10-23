@@ -1,0 +1,17 @@
+data:
+  path: MBZUAI/AraSEG
+  split: dev
+  setting: Pnx
+  remove_sent_markers: null
+tasks: [NP]
+output_dir: results
+overwrite: false
+limit_docs: null
+segmenters:
+  - name: camelbert
+    id: CAMeLBERT
+    model_path: MBZUAI/sentseg-camelbert-NP
+    max_length: 512
+    stride: 64
+    batch_size: 16
+    device: null

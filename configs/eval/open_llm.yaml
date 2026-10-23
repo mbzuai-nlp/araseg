@@ -1,0 +1,42 @@
+data:
+  path: MBZUAI/AraSEG
+  split: dev
+  setting: Pnx
+  remove_sent_markers: null
+tasks: [NP, PA]
+output_dir: results
+overwrite: false
+limit_docs: null
+segmenters:
+  - name: hf_llm
+    id: Fanar-2-27B-Instruct
+    model: QCRI/Fanar-2-27B-Instruct
+    system_prompt: hf_system.txt
+    chunk_size: 2048
+    chunk_overlap: 128
+    max_new_tokens: 8192
+    dtype: bfloat16
+  - name: hf_llm
+    id: Qwen3.6-27B
+    model: Qwen/Qwen3.6-27B
+    system_prompt: hf_system.txt
+    chunk_size: 2048
+    chunk_overlap: 128
+    max_new_tokens: 8192
+    dtype: bfloat16
+  - name: hf_llm
+    id: Jais-2-70B-Chat
+    model: inception42/Jais-2-70B-Chat
+    system_prompt: hf_system.txt
+    chunk_size: 2048
+    chunk_overlap: 128
+    max_new_tokens: 8192
+    dtype: bfloat16
+  - name: hf_llm
+    id: Qwen2.5-72B-Instruct
+    model: Qwen/Qwen2.5-72B-Instruct
+    system_prompt: hf_system.txt
+    chunk_size: 2048
+    chunk_overlap: 128
+    max_new_tokens: 8192
+    dtype: bfloat16

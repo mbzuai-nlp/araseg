@@ -1,0 +1,14 @@
+_base_: camelbert.yaml
+data:
+  setting: Pnx
+  remove_sent_markers: true
+task: PA
+labels: pnx_insertion
+training:
+  epochs: 5
+  learning_rate: 3.0e-5
+  class_weights: balanced
+final_eval:
+  splits: [dev, test]
+  setting: NoPnx
+output_dir: results/camelbert/PnxInsertion_PA

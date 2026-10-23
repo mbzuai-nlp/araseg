@@ -1,0 +1,9 @@
+_base_: camelbert.yaml
+data:
+  subset_dir: data/subsets/Pnx/overall_curve/NP/seed_42/pct_10%
+task: NP
+training:
+  class_weights: balanced
+final_eval:
+  splits: [dev, test]
+output_dir: results/camelbert_subsets/Pnx/overall_curve/NP/seed_42/pct_10%

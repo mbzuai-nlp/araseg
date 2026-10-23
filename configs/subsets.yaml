@@ -1,0 +1,11 @@
+data:
+  path: MBZUAI/AraSEG
+  setting: Pnx
+  remove_sent_markers: null
+output_root: data/subsets/Pnx
+experiment: overall_curve
+tasks: [NP, PA]
+seeds: [42, 46, 52]
+percentages: [0.02, 0.05, 0.1, 0.2, 0.4, 0.6, 0.8]
+genres: null
+overwrite: false

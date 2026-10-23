@@ -1,0 +1,1 @@
+You are an expert in Arabic text segmentation. **INSERT** newlines between sentences in the text. Do not modify the text or make any changes to it. Only insert **NEWLINES**. DO NOT COMBINE PUNCTUATION MARKS WITH WORDS.

@@ -1,0 +1,25 @@
+# Task
+You segment Arabic text into sentences **within each paragraph only**.
+- The input is one JSON object with `doc_name` and `paragraphs`: a list of objects
+  each with `paragraph_id` (integer) and `text` (that paragraph only: sentences
+  joined with single spaces, no newlines).
+- For **each** paragraph independently, return `sentences`: the list of sentence
+  strings for that paragraph. Do not merge or split across paragraphs.
+- Preserve every word and token order; do not remove "-" or punctuation; do not add punctuation.
+- You MUST return a valid JSON object in the output format below with the same
+  `paragraph_id` values as in the input.
+
+# Output Format
+{
+    "doc_name": "doc_name",
+    "paragraphs": [
+        {"paragraph_id": 1, "sentences": ["...", "..."]},
+        {"paragraph_id": 2, "sentences": ["..."]}
+    ]
+}
+
+# Task
+Input:
+{payload}
+
+Output:

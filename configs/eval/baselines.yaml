@@ -1,0 +1,22 @@
+data:
+  path: MBZUAI/AraSEG
+  split: dev
+  setting: Pnx
+  remove_sent_markers: null
+tasks: [NP, PA]
+output_dir: results
+overwrite: false
+limit_docs: null
+segmenters:
+  - name: paragraph_breaks
+  - name: nltk_punkt
+    train_data: MBZUAI/AraSEG
+    train_split: train
+    cache_path: null
+  - name: spacy_sent
+  - name: ersatz
+    binary: ersatz
+  - name: pysbd
+  - name: sat
+    model: sat-12l-sm
+    device: auto

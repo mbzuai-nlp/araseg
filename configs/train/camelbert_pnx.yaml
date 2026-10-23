@@ -1,0 +1,3 @@
+_base_: camelbert.yaml
+boundary_mode: pnx
+output_dir: results/camelbert/Pnx_NP_pnx-boundaries

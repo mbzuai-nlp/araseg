@@ -1,0 +1,9 @@
+input_json: null
+experiment_name: null
+split: dev
+task: NP
+output_dir: outputs
+output_file_name: segments.json
+return_word_details: false
+segmenter:
+  name: sat

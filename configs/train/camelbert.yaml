@@ -1,0 +1,34 @@
+data:
+  path: MBZUAI/AraSEG
+  setting: Pnx
+  remove_sent_markers: null
+  train_split: train
+  dev_split: dev
+  subset_dir: null
+task: NP
+labels: boundary
+boundary_mode: all
+pnx_dropout: 0.0
+model:
+  name: CAMeL-Lab/bert-base-arabic-camelbert-msa
+  max_length: 512
+  window_step: 64
+  stride: 64
+training:
+  epochs: 5
+  batch_size: 32  # 16 per GPU on two GPUs in the paper
+  learning_rate: 3.0e-5
+  warmup: 0.1
+  weight_decay: 0.01
+  grad_accum: 1
+  fp16: false
+  bf16: false
+  eval_steps: 500
+  class_weights: none
+  seed: 42
+final_eval:
+  splits: [dev, test]
+  setting: null
+wandb_project: null
+limit_docs: null
+output_dir: results/camelbert/Pnx_NP

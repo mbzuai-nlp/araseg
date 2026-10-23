@@ -1,0 +1,44 @@
+data:
+  path: MBZUAI/AraSEG
+  split: dev
+  setting: Pnx
+  remove_sent_markers: null
+tasks: [NP, PA]
+output_dir: results
+overwrite: false
+limit_docs: null
+segmenters:
+  - name: openai
+    id: GPT-4.1
+    model: gpt-4.1-2025-04-14
+    prompt_np: np.txt
+    prompt_pa: pa.txt
+    chunk_size: 8192
+    chunk_overlap: 128
+    max_retries: 3
+    sleep: 0.0
+    cache_dir: cache/llm
+    env_file: .env
+  - name: openai
+    id: GPT-5.5
+    model: gpt-5.5
+    prompt_np: np.txt
+    prompt_pa: pa.txt
+    chunk_size: 8192
+    chunk_overlap: 128
+    max_retries: 3
+    sleep: 0.0
+    cache_dir: cache/llm
+    env_file: .env
+  - name: gemini
+    id: Gemini-3.1-Pro
+    model: gemini-3.1-pro-preview
+    gemini_thinking_level: low
+    prompt_np: np.txt
+    prompt_pa: pa.txt
+    chunk_size: 8192
+    chunk_overlap: 128
+    max_retries: 3
+    sleep: 0.0
+    cache_dir: cache/llm
+    env_file: .env

@@ -1,0 +1,3 @@
+_base_: camelbert.yaml
+boundary_mode: word
+output_dir: results/camelbert/Pnx_NP_word-boundaries

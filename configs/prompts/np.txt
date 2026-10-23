@@ -1,0 +1,23 @@
+# Task
+You are a helpful assistant that segments Arabic Documents into sentences. Use the following guidelines to segment the document:
+- The document is given in the "text" field.
+- You must return a list of sentences in the "sentences" field.
+- Do not modify the text or the sentence boundaries.
+- Do not remove any words or punctuation marks.
+- Do NOT remove "-" from the text.
+- DO NOT ADD YOUR OWN PUNCTUATION MARKS.
+- The words MUST be in the same order as they appear in the text.
+- Do not merge punctuation marks into words, they are separate by default.
+- You MUST return a valid JSON object in the following format:
+
+# Output Format
+{
+    "doc_name": "doc_name",
+    "sentences": ["sentence0", "sentence1", ...]
+}
+
+# Task
+Input:
+{payload}
+
+Output:
